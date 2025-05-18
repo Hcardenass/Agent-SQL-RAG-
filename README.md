@@ -2,8 +2,8 @@
 
 ## 1.	Problemática: 
 
-En entornos empresariales, acceder a información detallada sobre pedidos, fechas críticas y sus cantidades (presupuesto, colocado, despachado, en producción y facturados) es un proceso fragmentado y algo que podría mejorarse. Aunque existen reportes en SAP HANA o BI corporativos que contienen tablas con la información completa, acceder a ellos implica múltiples pasos manuales y tiempos de espera significativos:
-a)	Entrar al sistema SAP S/4HANA o SAP Datasphere.
+En entornos empresariales, acceder a información detallada sobre pedidos, fechas críticas y sus cantidades (presupuesto, colocado, despachado, en producción y facturados) es un proceso fragmentado y algo que podría mejorarse. Aunque existen reportes en SAP HANA o BI corporativos que contienen tablas con la información completa, acceder a ellos implica múltiples pasos manuales y tiempos de espera significativos:/n
+a)	Entrar al sistema SAP S/4HANA o SAP Datasphere./n
 b)	Seleccionar la transacción correspondiente (por ejemplo, ZXXXXX).
 c)	Esperar a que la ejecución del reporte termine—lo cual puede tardar minutos o incluso más, si la reporte es muy grande y tiene mucha lógica e integración de tablas en el código.
 d)	Descargar la tabla o visualizarla en pantalla; a veces es necesario exportar a Excel para poder filtrar.
@@ -58,4 +58,6 @@ Explicación del flujo conversacional
   o	Valores clave (importe, fechas).
   o	Extractos de políticas y tablas.
   o	Enlaces o referencias a documentos y páginas.
+
+  6.	Pruebas 
 
