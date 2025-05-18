@@ -64,6 +64,7 @@ Explicación del flujo conversacional
   o	Extractos de políticas y tablas.
   o	Enlaces o referencias a documentos y páginas.
 
-  6.	Pruebas
+  6.	Pruebas                                                                                                                                                                   
      ![Pregunta1](Images/Pregunta1.png)
+     ![Pregunta2](Images/Pregunta2.png)
 
