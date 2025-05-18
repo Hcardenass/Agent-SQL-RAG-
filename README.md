@@ -10,25 +10,27 @@ c)	Esperar a que la ejecución del reporte termine—lo cual puede tardar minuto
 d)	Descargar la tabla o visualizarla en pantalla; a veces es necesario exportar a Excel para poder filtrar.                                    
 e)	Abrir el archivo Excel, aplicar filtros para ubicar el pedido específico o agrupar pedidos por “memo”, y luego buscar manualmente fechas de despacho exactas o cantidades en cada etapa (colocados, despachados, en producción, facturados).
 
-Por otro lado, se cuenta con información que no viene directamente de SAP, sino en documentos no estructurados (PDF de contratos, políticas internas), correos electrónicos (EML) con confirmaciones de proveedores o detalles de despacho, e incluso en páginas web de la intranet que contienen certificaciones y procedimientos que afectan ciertos pedidos. Sin unificación entre estas fuentes, surgen preguntas que el BI no cubre fácilmente, como:                                  
+Por otro lado, se cuenta con información que no viene directamente de SAP, sino en documentos no estructurados (PDF de contratos, políticas internas), correos electrónicos (EML) con confirmaciones de proveedores o detalles de despacho, e incluso en páginas web de la intranet que contienen certificaciones y procedimientos que afectan ciertos pedidos. Sin unificación entre estas fuentes, surgen preguntas que el BI no cubre fácilmente, como:     
+
 •	Fechas específicas de eventos: “¿En qué día exacto recibió el almacén la confirmación de despacho del pedido 67890?” (registrado en un correo).                                 
 •	Pedidos vinculados a un memo: “¿Qué pedidos pertenecen al memo X y cuáles de ellos están pendientes de facturar?”                                       
 •	Últimos cambios de pedidos: “¿Cuáles fueron los 5 pedidos que se modificaron por última vez en mayo de 2025?” (información que podría no estar disponible directamente en el BI o que requiere extraer toda la tabla de cambios de pedidos).                                           
 
 Estas consultas puntuales, que en un mundo ideal podrían resolverse con un par de clics en un BI, se traducen en: navegar en SAP, ejecutar transacciones, esperar resultados, exportar a Excel, filtrar manualmente y luego revisar correos o PDFs adicionales. El resultado es demoras de horas para obtener respuestas que deberían ser inmediatas.
-Contexto y actores involucrados
- 
-•	Analistas de operaciones, logística y ventas: preparan reportes diarios y requieren datos agregados al instante.
-•	Gerentes y directores: validan presupuestos y supervisan KPIs de producción, despacho y facturación.
-•	Equipos de TI/BI: mantienen los reportes en SAP y dashboards en el BI.
-•	Usuarios de áreas internas (Compras, Calidad, RR. HH.): necesitan consultar políticas y procedimientos en PDF y la intranet de Tecnofil.
 
-Limitaciones del enfoque tradicional
+### Contexto y actores involucrados
+•	Analistas de operaciones, logística y ventas: preparan reportes diarios y requieren datos agregados al instante.                               
+•	Gerentes y directores: validan presupuestos y supervisan KPIs de producción, despacho y facturación.                                       
+•	Equipos de TI/BI: mantienen los reportes en SAP y dashboards en el BI.                                   
+•	Usuarios de áreas internas (Compras, Calidad, RR. HH.): necesitan consultar políticas y procedimientos en PDF y la intranet de Tecnofil.                                        
+
+### Limitaciones del enfoque tradicional
 1.	Cuellos de botella en TI/BI: generación de reportes batch y acumulación de tickets retrasan la información.
 2.	Falta de integración: combinar datos estructurados de SAP con contenidos no estructurados (PDF, EML, web) requiere trabajo manual intensivo.
 3.	Esfuerzo y tiempo: las extracciones, exportaciones y agregaciones manuales consumen gran parte del día de los usuarios.
 
-Objetivo
+### Objetivo
+
 Diseñar un agente híbrido que, mediante consultas SQL en tiempo real a la vista comercial de SAP HANA y un sistema RAG capaz de procesar PDF, EML y página web, permita a analistas y directivos obtener respuestas en lenguaje natural de forma inmediata y sin depender de intervenciones manuales.
 Adicionalmente, el agente tiene la capacidad de generar gráficos automatizados en Python, por ejemplo, para mostrar evolución de pedidos, cumplimiento de despachos, o KPIs clave. Debido a las limitaciones del entorno de visualización en Streamlit, estas visualizaciones se guardan como imágenes en una carpeta local y pueden ser enviadas por correo electrónico como adjuntos, facilitando la distribución de reportes visuales a tomadores de decisiones.
 
