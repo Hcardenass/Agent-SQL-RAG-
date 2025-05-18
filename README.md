@@ -132,7 +132,8 @@ El proceso de fragmentar documentos (“chunking”) es crítico: un corte inade
 
 Valor de un buen agente SQL para SAP HANA:
 
-Una de las principales lecciones es que, cuando la información ya existe de forma estructurada en SAP HANA, construir un agente SQL robusto tiene ventajas importantes:              
+Una de las principales lecciones es que, cuando la información ya existe de forma estructurada en SAP HANA, construir un agente SQL robusto tiene ventajas importantes:    
+
 •	Respuestas en tiempo real con fiabilidad: al traducir directamente la consulta en lenguaje natural a una instrucción HANA optimizada, obtenemos datos precisos sin necesidad de procesos intermedios.         
 •	Ahorro de costos y complejidad: si la mayor parte de las consultas recae en datos estructurados, no hace falta llevarlos a una base de datos vectorial. Podemos reservar el uso de RAG exclusivamente para aquellos orígenes de datos no estructurados (PDF, EML, páginas web) que realmente lo requieran.                          
 En resumen, siempre que la fuente sea SAP HANA, conviene priorizar el agente SQL, no solo por rapidez, sino también por mantener los costos operativos bajo control.
