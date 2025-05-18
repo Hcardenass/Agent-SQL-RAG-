@@ -76,3 +76,61 @@ Explicación del flujo conversacional
 ## 3. Arquitectura de solución
 
 ![Arquitectura de Agente SQL + RAG](Arquitectura_Agent_RAG.gif)
+
+
+La solución está compuesta por un agente híbrido inteligente que direcciona las consultas del usuario hacia la ruta más adecuada: consulta estructurada en SAP HANA o recuperación aumentada (RAG) desde documentos no estructurados. A continuación, se describen los principales componentes:
+
+
+🤖 Agente                                                        
+•	Interfaz de entrada: el usuario realiza una pregunta en lenguaje natural desde una interfaz.                                   
+•	Disparador de decisión: clasifica la consulta y dirige la ejecución hacia la herramienta SQL (estructura) o la herramienta RAG (no estructura).
+
+🔧 Herramientas  
+
+•	Herramienta SQL (SAP HANA):
+o	Convierte la pregunta en una consulta SQL.
+o	Se conecta a la base SAP HANA mediante un conector personalizado.
+o	Responde en lenguaje natural al usuario.
+
+•	Herramienta RAG:
+o	Ingresa documentos desde distintas fuentes (PDF, EML, páginas web) mediante un loader.
+o	Aplica chunking, dividiendo el contenido en fragmentos manejables.
+o	Genera representaciones vectoriales usando un modelo de embeddings.
+o	Almacena los vectores en una base vectorial (FAISS, Chroma, InMemoryVectorStore).
+o	Filtra resultados con base en metadatos (tipo de documento, origen, fecha, remitente).
+o	Utiliza HyDE (Hypothetical Document Embeddings) para enriquecer la recuperación generando documentos hipotéticos que mejoran los resultados del RAG.
+
+• Herramienta Generador de gráficos (Python):
+o	A partir de resultados estructurados (por ejemplo, KPIs o evolución de pedidos), se genera una visualización usando bibliotecas de Python como Matplotlib o Plotly.
+o	Debido a limitaciones de visualización en tiempo real en Streamlit, los gráficos se guardan como archivos de imagen en una carpeta local.
+o	Estas imágenes pueden ser incluidas como adjuntos en correos automáticos, permitiendo a usuarios clave recibir reportes visuales sin tener que acceder al sistema.
+
+🔁 Pipeline RAG
+1.	Ingesta → loader.
+2.	Chunking → partición inteligente del texto.
+3.	Embeddings → generación de vectores.
+4.	Vector Store → almacenamiento y recuperación.
+5.	HyDE (opcional) → generación adicional de chunks hipotéticos.
+6.	Prompt template + contexto → se genera una respuesta precisa y contextualizada.
+
+📦 Vector Store + Filtros
+•	Almacena todos los vectores generados.
+•	Mejora la precisión aplicando filtros por metadatos: tipo de archivo, cliente, fecha, etc.
+
+ 🧠 Memory Saver
+•	Se usa un componente de memoria conversacional para mantener el contexto del usuario a lo largo de varias interacciones.
+
+📤 Envío por correo (opcional)
+•	Las respuestas pueden enviarse automáticamente en formato amigable utilizando GoogleToolkit, integrando visualización y formato claro por correo electrónico.
+
+
+
+
+
+
+
+
+
+
+
+
