@@ -132,18 +132,18 @@ El proceso de fragmentar documentos (“chunking”) es crítico: un corte inade
 
 Valor de un buen agente SQL para SAP HANA:
 
-Una de las principales lecciones es que, cuando la información ya existe de forma estructurada en SAP HANA, construir un agente SQL robusto tiene ventajas importantes:
-•	Respuestas en tiempo real con fiabilidad: al traducir directamente la consulta en lenguaje natural a una instrucción HANA optimizada, obtenemos datos precisos sin necesidad de procesos intermedios.
-•	Ahorro de costos y complejidad: si la mayor parte de las consultas recae en datos estructurados, no hace falta llevarlos a una base de datos vectorial. Podemos reservar el uso de RAG exclusivamente para aquellos orígenes de datos no estructurados (PDF, EML, páginas web) que realmente lo requieran.
+Una de las principales lecciones es que, cuando la información ya existe de forma estructurada en SAP HANA, construir un agente SQL robusto tiene ventajas importantes:              
+•	Respuestas en tiempo real con fiabilidad: al traducir directamente la consulta en lenguaje natural a una instrucción HANA optimizada, obtenemos datos precisos sin necesidad de procesos intermedios.         
+•	Ahorro de costos y complejidad: si la mayor parte de las consultas recae en datos estructurados, no hace falta llevarlos a una base de datos vectorial. Podemos reservar el uso de RAG exclusivamente para aquellos orígenes de datos no estructurados (PDF, EML, páginas web) que realmente lo requieran.                          
 En resumen, siempre que la fuente sea SAP HANA, conviene priorizar el agente SQL, no solo por rapidez, sino también por mantener los costos operativos bajo control.
 
 La solución como orquestador de acciones, no solo informador:
 
 Una reflexión final es que este tipo de agente híbrido no se limita a “responder preguntas”: también puede desencadenar acciones. Por ejemplo:
 
-•	Enviar un correo con un reporte automatizado.
-•	Actualizar un estado de pedido o generar alertas si cierta métrica supera un umbral.
-•	Guardar gráficos generados en Python y distribuirlos a un grupo de usuarios.
+•	Enviar un correo con un reporte automatizado.                                
+•	Actualizar un estado de pedido o generar alertas si cierta métrica supera un umbral.                       
+•	Guardar gráficos generados en Python y distribuirlos a un grupo de usuarios.                                             
 
 De esta forma, la herramienta se convierte en un orquestador de tareas, capaz de ejecutar flujos de trabajo completos desde la recuperación de datos hasta la notificación y acción sin intervención manual. Esto agrega un nivel de valor estratégico, ya que el agente puede “ejecutar” procesos en lugar de limitarse a “informar” datos.
 
