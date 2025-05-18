@@ -71,4 +71,8 @@ Explicación del flujo conversacional
      ![Pregunta4](Images/Pregunta4.png)
      ![Pregunta5](Images/Pregunta5.png)
      ![Pregunta6](Images/Pregunta6.png)
-     ![Pregunta7](Images/Pregunta8.png)  	 	
+     ![Pregunta7](Images/Pregunta8.png)
+
+## 3. Arquitectura de solución
+
+![Arquitectura de Agente SQL + RAG](Arquitectura_Agent_RAG.gif)
