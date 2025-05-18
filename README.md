@@ -67,4 +67,8 @@ Explicación del flujo conversacional
   6.	Pruebas                                                                                                                                                                   
      ![Pregunta1](Images/Pregunta1.png)
      ![Pregunta2](Images/Pregunta2.png)
-
+     ![Pregunta3](Images/Pregunta3.png)
+     ![Pregunta4](Images/Pregunta4.png)
+     ![Pregunta5](Images/Pregunta5.png)
+     ![Pregunta6](Images/Pregunta6.png)
+     ![Pregunta7](Images/Pregunta8.png)  	 	
