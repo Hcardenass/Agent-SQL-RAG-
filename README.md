@@ -124,7 +124,7 @@ o	Estas imágenes pueden ser incluidas como adjuntos en correos automáticos, pe
 •	Las respuestas pueden enviarse automáticamente en formato amigable utilizando GoogleToolkit, integrando visualización y formato claro por correo electrónico.
 
 
-##4.	Reflexión sobre los aprendizajes y recomendaciones
+## 4.	Reflexión sobre los aprendizajes y recomendaciones
 
 Importancia de un “recorte” adecuado: 
 
