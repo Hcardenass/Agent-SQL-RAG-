@@ -70,7 +70,9 @@ Explicación del flujo conversacional
      ![Pregunta3](Images/Pregunta3.png)
      ![Pregunta4](Images/Pregunta4.png)
      ![Pregunta5](Images/Pregunta5.png)
+    	
      ![Pregunta6](Images/Pregunta6.png)
+     
      ![Pregunta7](Images/Pregunta7.png)
 
 ## 3. Arquitectura de solución
