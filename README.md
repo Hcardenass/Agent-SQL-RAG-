@@ -32,7 +32,7 @@ Estas consultas puntuales, que en un mundo ideal podrían resolverse con un par 
 
 ### Objetivo                                
 
-Diseñar un agente híbrido que, mediante consultas SQL en tiempo real a la vista comercial de SAP HANA y un sistema RAG capaz de procesar PDF, EML y página web, permita a analistas y directivos obtener respuestas en lenguaje natural de forma inmediata y sin depender de intervenciones manuales.
+Diseñar un agente híbrido que, mediante consultas SQL en tiempo real a la vista comercial de SAP HANA y un sistema RAG capaz de procesar PDF, EML y página web, permita a analistas y directivos obtener respuestas en lenguaje natural de forma inmediata y sin depender de intervenciones manuales.A su vez, convierte el resultado en un mensaje de voz y lo envía automáticamente por WhatsApp.
 Adicionalmente, el agente tiene la capacidad de generar gráficos automatizados en Python, por ejemplo, para mostrar evolución de pedidos, cumplimiento de despachos, o KPIs clave. Debido a las limitaciones del entorno de visualización en Streamlit, estas visualizaciones se guardan como imágenes en una carpeta local y pueden ser enviadas por correo electrónico como adjuntos, facilitando la distribución de reportes visuales a tomadores de decisiones.
 
 
@@ -120,8 +120,8 @@ o	Estas imágenes pueden ser incluidas como adjuntos en correos automáticos, pe
  🧠 Memory Saver
 •	Se usa un componente de memoria conversacional para mantener el contexto del usuario a lo largo de varias interacciones.
 
-📤 Envío por correo (opcional)
-•	Las respuestas pueden enviarse automáticamente en formato amigable utilizando GoogleToolkit, integrando visualización y formato claro por correo electrónico.
+📤 Envío por Whatsapp como mensaje de audio (opcional)
+•	Las respuestas pueden enviarse automáticamente en formato de audio utilizando Twilio, haciendo más practico la comunicación
 
 
 ## 4.	Reflexión sobre los aprendizajes y recomendaciones
