@@ -64,14 +64,6 @@ Explicación del flujo conversacional
   o	Extractos de políticas y tablas.
   o	Enlaces o referencias a documentos y páginas.
 
-  6.	Pruebas                                                                                                                                                                   
-     ![Pregunta1](Images/Pregunta1.png)
-     ![Pregunta2](Images/Pregunta2.png)
-     ![Pregunta3](Images/Pregunta3.png)
-     ![Pregunta4](Images/Pregunta4.png)
-     ![Pregunta5](Images/Pregunta5.png)
-     ![Pregunta6](Images/Pregunta6.png)
-     ![Pregunta7](Images/Pregunta7.png)
 
 ## 3. Arquitectura de solución
 
